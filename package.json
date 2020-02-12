@@ -1,0 +1,49 @@
+{
+  "name": "w3xdata",
+  "version": "1.0.0",
+  "description": "Exact data from Warcraft III maps",
+  "author": "verit",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "sandbox": "ts-node sandbox/index.ts",
+    "sandbox-debug": "node -r ts-node/register --inspect-brk sandbox/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "eslint": "^6.8.0",
+    "eslint-config-mdcs": "^4.2.3",
+    "eslint-config-verit": "^1.0.3",
+    "npm-watch": "^0.6.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.4"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "ts",
+      "legacyWatch": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voces/wc3data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/voces/wc3data/issues"
+  },
+  "homepage": "https://github.com/voces/wc3data#readme",
+  "files": [
+    "dist/src"
+  ],
+  "main": "dist/src/index.js",
+  "dependencies": {
+    "@voces/wc3maptranslator": "^4.0.3",
+    "wc3data": "^2.0.0"
+  },
+  "type": "module"
+}
