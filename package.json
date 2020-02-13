@@ -1,6 +1,6 @@
 {
   "name": "w3xdata",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Exact data from Warcraft III maps",
   "author": "verit",
   "license": "MIT",
@@ -43,6 +43,6 @@
   "main": "dist/index.js",
   "dependencies": {
     "@voces/wc3maptranslator": "^4.0.3",
-    "wc3data": "^2.1.0"
+    "wc3data": "^2.2.0"
   }
 }
