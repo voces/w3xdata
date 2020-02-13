@@ -1,13 +1,13 @@
 {
   "name": "w3xdata",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Exact data from Warcraft III maps",
   "author": "verit",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "sandbox": "ts-node sandbox/index.ts",
-    "sandbox-debug": "node -r ts-node/register --inspect-brk sandbox/index.ts"
+    "sandbox": "ts-node src/sandbox.ts",
+    "sandbox-debug": "node -r ts-node/register --inspect-brk src/sandbox.ts"
   },
   "devDependencies": {
     "@types/node": "^13.7.0",
@@ -38,12 +38,11 @@
   },
   "homepage": "https://github.com/voces/wc3data#readme",
   "files": [
-    "dist/src"
+    "dist"
   ],
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "dependencies": {
     "@voces/wc3maptranslator": "^4.0.3",
-    "wc3data": "^2.0.0"
-  },
-  "type": "module"
+    "wc3data": "^2.1.0"
+  }
 }
