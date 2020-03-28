@@ -1,7 +1,7 @@
 
 # w3xdata
 
-`w3xdata` allows for extracting data Warcraft 3 maps in a typed, semi-structured way.
+`w3xdata` allows for extracting Warcraft 3 map data in a typed, semi-structured way.
 
 ## Examples
 
