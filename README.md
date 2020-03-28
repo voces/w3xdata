@@ -17,8 +17,8 @@ Promise.all( [
     const strings = mapStrings( wts );
     const units = replaceStrings( mapUnitSpecs( w3u ), strings );
 
-    console.log( game.data.units.hfoo.text?.Name ); // "Footman"
-    console.log( game.data.units.h001.text?.Name ); // "Custom Footman"
+    console.log( units.hfoo.text?.Name ); // "Footman"
+    console.log( units.h001.text?.Name ); // "Custom Footman"
 
 } );
 
