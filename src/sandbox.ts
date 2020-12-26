@@ -1,11 +1,10 @@
-
-import { mapUnitSpecs } from "./index";
+/* eslint-disable no-console */
 import { promises as fs } from "fs";
 import { inspect } from "util";
 
-fs.readFile( "./src/test/data/war3map.w3u" ).then( buffer => {
+import { mapUnitSpecs } from "./index";
 
-	const result = mapUnitSpecs( buffer );
-	console.log( inspect( result, false, 4, true ) );
-
-} );
+fs.readFile("./src/test/data/war3map.w3u").then((buffer) => {
+	const result = mapUnitSpecs(buffer);
+	console.log(inspect(result, false, 4, true));
+});

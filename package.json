@@ -1,24 +1,25 @@
 {
   "name": "w3xdata",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "Exact data from Warcraft III maps",
   "author": "verit",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "sandbox": "ts-node src/sandbox.ts",
     "sandbox-debug": "node -r ts-node/register --inspect-brk src/sandbox.ts"
   },
   "devDependencies": {
-    "@types/node": "^13.7.0",
-    "@typescript-eslint/eslint-plugin": "^2.15.0",
-    "@typescript-eslint/parser": "^2.15.0",
-    "eslint": "^6.8.0",
-    "eslint-config-mdcs": "^4.2.3",
-    "eslint-config-verit": "^1.0.3",
-    "npm-watch": "^0.6.0",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.4"
+    "@types/node": "^14.14.16",
+    "@typescript-eslint/eslint-plugin": "^4.11.0",
+    "@typescript-eslint/parser": "^4.11.0",
+    "eslint": "^7.16.0",
+    "eslint-config-verit": "^3.3.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "npm-watch": "^0.7.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
   },
   "watch": {
     "build": {
@@ -44,6 +45,6 @@
   "module": "dist/index.js",
   "dependencies": {
     "@voces/wc3maptranslator": "^4.0.3",
-    "wc3data": "^2.2.1"
+    "wc3data": "^2.2.2"
   }
 }

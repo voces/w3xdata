@@ -2,16 +2,11 @@
   "compilerOptions": {
     "outDir": "dist",
     "baseUrl": "src",
-    "allowJs": false,
     "target": "es6",
     "lib": ["es2020", "dom"],
     "moduleResolution": "node",
     "strict": true,
-    "noImplicitAny": false,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
     "declaration": true,
-    "strictNullChecks": true,
     "paths": {
       "*": [
         "../node_modules/*/src/index",
@@ -23,6 +18,5 @@
     "types": ["@types/node"],
     "esModuleInterop": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/*.test.ts", "src/sandbox.ts"]
+  "include": ["src"]
 }
