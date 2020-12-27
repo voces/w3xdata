@@ -4,7 +4,7 @@ import { mapUnitSpecs } from "./mapUnitSpecs";
 
 it("works", async () => {
 	const file = await readFile("src/test/data/war3map.w3u");
-	const specs = mapUnitSpecs(file);
+	const specs = mapUnitSpecs(file.buffer as Uint8Array);
 
 	expect(specs).toMatchObject({
 		hhou: {

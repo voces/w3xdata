@@ -3,8 +3,8 @@ import { units as baseUnits, UnitSpec } from "wc3data/dist/index";
 
 import { applyModifications, deepClone } from "./util";
 
-export const mapUnitSpecs = (w3u: Buffer): Record<string, UnitSpec> => {
-	const file = new War3MapW3u(w3u.buffer);
+export const mapUnitSpecs = (w3u: TypedArray): Record<string, UnitSpec> => {
+	const file = new War3MapW3u(w3u);
 
 	const units = deepClone(baseUnits);
 
