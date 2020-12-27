@@ -9,11 +9,13 @@
     "test-debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "test": "jest",
     "sandbox-debug": "node -r ts-node/register --inspect-brk src/sandbox.ts",
-    "sandbox": "ts-node src/sandbox.ts"
+    "sandbox": "ts-node src/sandbox.ts",
+    "postinstall": "tsc -p node_modules/mdx-m3-viewer/tsconfig.json --declaration"
   },
   "devDependencies": {
     "@types/jest": "^26.0.19",
     "@types/node": "^14.14.16",
+    "@types/pako": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
     "eslint": "^7.16.0",

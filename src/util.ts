@@ -1,4 +1,4 @@
-import Modification from "mdx-m3-viewer/src/parsers/w3x/w3u/modification";
+import Modification from "mdx-m3-viewer/dist/parsers/w3x/w3u/modification";
 import { castValue, types, UnitSpec } from "wc3data";
 
 // todo: use an actual algorithm

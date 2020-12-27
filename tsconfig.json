@@ -15,7 +15,8 @@
       ]
     },
     "types": ["@types/node", "@types/jest", "mdx-m3-viewer/src/types"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": ["src"]
 }

@@ -1,4 +1,4 @@
-import War3MapW3u from "mdx-m3-viewer/src/parsers/w3x/w3u/file";
+import War3MapW3u from "mdx-m3-viewer/dist/parsers/w3x/w3u/file";
 import { units as baseUnits, UnitSpec } from "wc3data/dist/index";
 
 import { applyModifications, deepClone } from "./util";
