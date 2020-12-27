@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": "src",
     "target": "es6",
     "lib": ["es2020", "dom"],
     "moduleResolution": "node",
@@ -15,7 +14,7 @@
         "../node_modules/*/dist/index"
       ]
     },
-    "types": ["@types/node"],
+    "types": ["@types/node", "@types/jest", "mdx-m3-viewer/src/types"],
     "esModuleInterop": true
   },
   "include": ["src"]

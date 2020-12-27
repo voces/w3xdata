@@ -1,4 +1,4 @@
-import { Modification } from "@voces/wc3maptranslator/lib/translators/object/ObjectsTranslator.js";
+import Modification from "mdx-m3-viewer/src/parsers/w3x/w3u/modification";
 import { castValue, types, UnitSpec } from "wc3data";
 
 // todo: use an actual algorithm
@@ -21,13 +21,13 @@ export const applyModifications = (
 		if (category) {
 			if (!unsafeUnit[category]) unsafeUnit[category] = {};
 			unsafeUnit[category][type.field] = castValue(
-				modification.value,
+				modification.value.toString(),
 				type.field,
 				type,
 			);
 		} else
 			unsafeUnit[type.field] = castValue(
-				modification.value,
+				modification.value.toString(),
 				type.field,
 				type,
 			);

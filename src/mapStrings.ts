@@ -1,12 +1,7 @@
-import { StringsTranslator } from "@voces/wc3maptranslator/lib/translators/StringsTranslator";
+import War3MapWts from "mdx-m3-viewer/src/parsers/w3x/wts/file";
 
-export const mapStrings = (wts: Buffer): Record<string, string> => {
-	const translator = new StringsTranslator();
-	const { errors, json } = translator.warToJson(wts);
-	if (errors.length) throw errors;
-
-	return json;
-};
+export const mapStrings = (wts: string): Record<string, string> =>
+	Object.fromEntries(new War3MapWts(wts).stringMap.entries());
 
 export const replaceStrings = <T>(
 	value: T,

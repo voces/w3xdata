@@ -1,26 +1,20 @@
-import ObjectsTranslator from "@voces/wc3maptranslator/lib/translators/object/ObjectsTranslator";
+import War3MapW3u from "mdx-m3-viewer/src/parsers/w3x/w3u/file";
 import { units as baseUnits, UnitSpec } from "wc3data/dist/index";
 
 import { applyModifications, deepClone } from "./util";
 
 export const mapUnitSpecs = (w3u: Buffer): Record<string, UnitSpec> => {
-	const translator = new ObjectsTranslator.ObjectsTranslator();
-	const { errors, json } = translator.warToJson(
-		translator.ObjectType.Units,
-		w3u,
-	);
-	if (errors.length) throw errors;
+	const file = new War3MapW3u(w3u.buffer);
 
 	const units = deepClone(baseUnits);
 
-	for (const [key, modifications] of Object.entries(json.custom)) {
-		const [type, baseType] = key.split(":");
-		units[type] = deepClone(units[baseType]);
-		applyModifications(units[type], modifications);
+	for (const { newId, oldId, modifications } of file.customTable.objects) {
+		units[newId] = deepClone(units[oldId]);
+		applyModifications(units[newId], modifications);
 	}
 
-	for (const [key, modifications] of Object.entries(json.original))
-		applyModifications(units[key], modifications);
+	for (const { oldId, modifications } of file.originalTable.objects)
+		applyModifications(units[oldId], modifications);
 
 	return units;
 };
