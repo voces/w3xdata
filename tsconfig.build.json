@@ -1,7 +1,4 @@
 {
-    "extends": "./tsconfig.json",
-    "exclude": ["node_modules", "**/*.test.ts", "src/sandbox.ts"],
-    "compilerOptions": {
-        "types": ["mdx-m3-viewer/src/types"]
-    }
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "**/*.test.ts", "src/sandbox.ts"]
 }

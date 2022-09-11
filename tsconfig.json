@@ -6,15 +6,7 @@
     "moduleResolution": "node",
     "strict": true,
     "declaration": true,
-    "paths": {
-      "*": [
-        "../node_modules/*/src/index",
-        "../node_modules/*/lib/index",
-        "../node_modules/*/index",
-        "../node_modules/*/dist/index"
-      ]
-    },
-    "types": ["@types/node", "@types/jest", "mdx-m3-viewer/src/types"],
+    "types": ["@types/node", "@types/jest"],
     "esModuleInterop": true,
     "skipLibCheck": true
   },
