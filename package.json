@@ -9,7 +9,7 @@
     "sandbox-debug": "node -r ts-node/register --inspect-brk src/sandbox.ts",
     "sandbox": "ts-node src/sandbox.ts",
     "test-debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
-    "test-lint": "deno lint . --ignore=node_modules",
+    "test-lint": "deno lint . --ignore=node_modules,dist",
     "test": "jest"
   },
   "devDependencies": {
