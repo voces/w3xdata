@@ -6,6 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
     "sandbox-debug": "node -r ts-node/register --inspect-brk src/sandbox.ts",
     "sandbox": "ts-node src/sandbox.ts",
     "test-debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
@@ -36,6 +38,6 @@
   "module": "dist/index.js",
   "dependencies": {
     "mdx-m3-viewer": "^5.12.0",
-    "wc3data": "^2.2.2"
+    "wc3data": "^2.2.5"
   }
 }

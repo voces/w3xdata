@@ -1,4 +1,6 @@
-import War3MapWts from "mdx-m3-viewer/dist/cjs/parsers/w3x/wts/file";
+import { parsers } from "mdx-m3-viewer";
+
+const War3MapWts = parsers.w3x.wts.File;
 
 export const mapStrings = (wts: string): Record<string, string> => {
   const parser = new War3MapWts();

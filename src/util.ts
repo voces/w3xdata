@@ -1,5 +1,6 @@
 import type Modification from "mdx-m3-viewer/dist/cjs/parsers/w3x/w3u/modification";
-import { castValue, types, UnitSpec } from "wc3data";
+import type { UnitSpec } from "wc3data";
+import { castValue, types } from "wc3data";
 
 // todo: use an actual algorithm
 export const deepClone = <T>(obj: T): T => JSON.parse(JSON.stringify(obj));
