@@ -4,6 +4,7 @@
     "target": "es6",
     "lib": ["es2020", "dom"],
     "moduleResolution": "node",
+    "module": "CommonJS",
     "strict": true,
     "declaration": true,
     "types": ["@types/node", "@types/jest"],
