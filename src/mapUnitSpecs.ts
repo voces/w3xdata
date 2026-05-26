@@ -1,4 +1,4 @@
-import { parsers } from "mdx-m3-viewer";
+import { parsers } from "mdx-m3-viewer-th";
 import type { UnitSpec } from "wc3data";
 import { units as baseUnits } from "wc3data";
 

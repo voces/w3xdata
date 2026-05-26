@@ -1,4 +1,4 @@
-import { parsers } from "mdx-m3-viewer";
+import { parsers } from "mdx-m3-viewer-th";
 
 const War3MapWts = parsers.w3x.wts.File;
 

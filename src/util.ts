@@ -1,4 +1,4 @@
-import type Modification from "mdx-m3-viewer/dist/cjs/parsers/w3x/w3u/modification";
+import type Modification from "mdx-m3-viewer-th/dist/cjs/parsers/w3x/w3u/modification";
 import type { UnitSpec } from "wc3data";
 import { castValue, types } from "wc3data";
 

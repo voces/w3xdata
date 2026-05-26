@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
     "outDir": "dist",
-    "target": "es6",
-    "lib": ["es2020", "dom"],
-    "moduleResolution": "node",
-    "module": "CommonJS",
+    "target": "es2022",
+    "lib": ["es2022", "dom"],
+    "module": "Node16",
+    "moduleResolution": "Node16",
     "strict": true,
+    "isolatedModules": true,
     "declaration": true,
     "types": ["@types/node", "@types/jest"],
     "esModuleInterop": true,
