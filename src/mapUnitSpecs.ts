@@ -1,27 +1,15 @@
-import { parsers } from "mdx-m3-viewer-th";
 import type { UnitSpec } from "wc3data";
 import { units as baseUnits } from "wc3data";
 
-import { applyModifications } from "./util";
-
-const War3MapW3u = parsers.w3x.w3u.File;
+import type { W3uW3tInput } from "./util";
+import { applyDataFile } from "./util";
 
 export const mapUnitSpecs = (
-  w3u: Parameters<InstanceType<typeof War3MapW3u>["load"]>[0],
+  w3u: W3uW3tInput,
+  w3uSkin?: W3uW3tInput,
 ): Record<string, UnitSpec> => {
-  const file = new War3MapW3u();
-  file.load(w3u);
-
   const units = structuredClone(baseUnits);
-
-  for (const { newId, oldId, modifications } of file.customTable.objects) {
-    units[newId] = structuredClone(units[oldId]);
-    applyModifications(units[newId], modifications);
-  }
-
-  for (const { oldId, modifications } of file.originalTable.objects) {
-    applyModifications(units[oldId], modifications);
-  }
-
+  applyDataFile(units, w3u);
+  if (w3uSkin) applyDataFile(units, w3uSkin);
   return units;
 };

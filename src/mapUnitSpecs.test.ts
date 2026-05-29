@@ -9,17 +9,28 @@ it("works", async () => {
   expect(specs).toMatchObject({
     hhou: {
       stats: { HP: 120, bldtm: 1 },
-      tech: { Trains: ["nC13"] },
-      text: { Name: "Farm", Hotkey: "F", Tip: "Build Farm" },
     },
     hC06: {
       stats: { HP: 350, bldtm: 2 },
       tech: { Trains: ["nC13"] },
-      text: {
-        Name: "TRIGSTR_1417",
-        Hotkey: "TRIGSTR_1419",
-        Tip: "TRIGSTR_4442",
-      },
+    },
+  });
+});
+
+it("applies skin overrides on top of the main w3u", async () => {
+  const [w3u, skin] = await Promise.all([
+    readFile("src/test/data/war3map.w3u"),
+    readFile("src/test/data/war3mapSkin.w3u"),
+  ]);
+  const specs = mapUnitSpecs(w3u, skin);
+
+  expect(specs.hC06).toMatchObject({
+    stats: { HP: 350, bldtm: 2 },
+    text: {
+      Name: "TRIGSTR_1417",
+      Hotkey: "TRIGSTR_1419",
+      Tip: "TRIGSTR_4442",
+      Ubertip: "TRIGSTR_1529",
     },
   });
 });
