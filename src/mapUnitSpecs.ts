@@ -2,7 +2,7 @@ import { parsers } from "mdx-m3-viewer-th";
 import type { UnitSpec } from "wc3data";
 import { units as baseUnits } from "wc3data";
 
-import { applyModifications, deepClone } from "./util";
+import { applyModifications } from "./util";
 
 const War3MapW3u = parsers.w3x.w3u.File;
 
@@ -12,10 +12,10 @@ export const mapUnitSpecs = (
   const file = new War3MapW3u();
   file.load(w3u);
 
-  const units = deepClone(baseUnits);
+  const units = structuredClone(baseUnits);
 
   for (const { newId, oldId, modifications } of file.customTable.objects) {
-    units[newId] = deepClone(units[oldId]);
+    units[newId] = structuredClone(units[oldId]);
     applyModifications(units[newId], modifications);
   }
 

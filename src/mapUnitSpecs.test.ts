@@ -10,7 +10,7 @@ it("works", async () => {
     hhou: {
       stats: { HP: 120, bldtm: 1 },
       tech: { Trains: ["nC13"] },
-      text: { Name: "Farm", Hotkey: "F", Tip: "Build |cffffcc00F|rarm" },
+      text: { Name: "Farm", Hotkey: "F", Tip: "Build Farm" },
     },
     hC06: {
       stats: { HP: 350, bldtm: 2 },
