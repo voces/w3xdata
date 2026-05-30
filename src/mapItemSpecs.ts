@@ -9,7 +9,7 @@ export const mapItemSpecs = (
   w3tSkin?: W3uW3tInput,
 ): Record<string, ItemSpec> => {
   const items = structuredClone(baseItems);
-  applyDataFile(items, w3t);
-  if (w3tSkin) applyDataFile(items, w3tSkin);
+  applyDataFile(items, w3t, "item");
+  if (w3tSkin) applyDataFile(items, w3tSkin, "item");
   return items;
 };
