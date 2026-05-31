@@ -34,3 +34,16 @@ it("applies skin overrides on top of the main w3u", async () => {
     },
   });
 });
+
+it("applies unit-valid art fields like uico", async () => {
+  const [w3u, skin] = await Promise.all([
+    readFile("src/test/data/war3map.w3u"),
+    readFile("src/test/data/war3mapSkin.w3u"),
+  ]);
+  const specs = mapUnitSpecs(w3u, skin);
+
+  // uico is the unit-icon field (useUnit=1), so unlike on items it applies.
+  expect(specs.hC06.art).toMatchObject({
+    Art: "ReplaceableTextures\\CommandButtons\\BTNHumanBarracks.blp",
+  });
+});
